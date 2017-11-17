@@ -26,13 +26,13 @@ $url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEAR
 define('DB_NAME', trim($url['path'], '/'));
 
 /** MySQL database username */
-define('DB_USER', $url['user']);
+define('DB_USER', trim($url['user']));
 
 /** MySQL database password */
-define('DB_PASSWORD', $url['pass']);
+define('DB_PASSWORD', trim($url['pass']));
 
 /** MySQL hostname */
-define('DB_HOST', $url['host']);
+define('DB_HOST', trim($url['host']));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
