@@ -3,4 +3,5 @@
 *.env
 tasks
 
+.connect-mysql.sh
 /vendor/
